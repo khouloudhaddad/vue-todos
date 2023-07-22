@@ -27,3 +27,9 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Steps
+
+```sh
+npm init vue@latest
+```
