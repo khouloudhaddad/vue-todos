@@ -7,7 +7,8 @@
     uid
   } from 'uid';
   const todoList = ref([]);
-  const createTodo = (todo) => {
+const createTodo = (todo) => {
+    console.log(todo)
     todoList.value.push({
       id: uid(),
       todo,
@@ -19,7 +20,7 @@
 
 <template>
   <main>
-    <h1>Create Todo</h1>
+    <h1 class="font-bold text-2xl mb-16 text-gray-700">Create Todo</h1>
     <TodoCreator @create-todo="createTodo" />
     <div class="todoslist">
         <ul>
@@ -40,7 +41,6 @@
     margin: 0 auto;
     padding: 40px 16px;
     h1 {
-      margin-bottom: 16px;
       text-align: center;
     }
   }
