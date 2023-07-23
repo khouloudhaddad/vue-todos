@@ -3,7 +3,7 @@
         reactive,
         ref
     } from "vue";
-    const todo = ref("Testing");
+    const todo = ref("");
 
 </script>
 
