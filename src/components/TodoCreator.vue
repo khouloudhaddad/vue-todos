@@ -5,12 +5,13 @@
     } from "vue";
     const todoState = reactive({
         todo: "",
-        invalid: "",
+        invalid: false,
         errMsg: ""
     });
     const emit = defineEmits(['create-todo']);
     const createTodo = () => {
         if (todoState.todo !== "") {
+            todoState.invalid = false;
             emit("create-todo", todoState.todo);
             todoState.todo = "";
             return;
