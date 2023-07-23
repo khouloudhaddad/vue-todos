@@ -4,9 +4,7 @@
         ref
     } from "vue";
     const todo = ref("Testing");
-const todoState = reactive({
-        todo: "testingState"
-    });
+
 </script>
 
 <template>
