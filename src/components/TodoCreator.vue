@@ -33,7 +33,7 @@
         </div>
     </form>
     
-    <p class="err-msg mt-1">{{ todoState.errMsg }}</p>
+    <p v-show="todoState.invalid" class="err-msg mt-1">{{ todoState.errMsg }}</p>
 </template>
 
 <style lang="scss" scoped>
@@ -61,7 +61,6 @@
     .err-msg {
         margin-top: 6px;
         font-size: 12px;
-        text-align: center;
         color: red;
     }
 </style>
