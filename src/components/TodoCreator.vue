@@ -9,7 +9,7 @@
 
 <template>
     <div class="input-wrap">
-        <input type="text" v-model="todoState.todo" />
+        <input type="text" v-model="todo" />
         <button>Create</button>
     </div>
     <p>{{ todo }}</p>
