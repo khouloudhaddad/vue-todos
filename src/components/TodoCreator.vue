@@ -9,8 +9,8 @@
     <div class="input-wrap">
         <input type="text" v-model="todo" />
         <button>Create</button>
-        <p>{{ todo }}</p>
     </div>
+    <p>{{ todo }}</p>
 </template>
 
 <style lang="scss" scoped>
