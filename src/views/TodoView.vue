@@ -21,6 +21,13 @@
   <main>
     <h1>Create Todo</h1>
     <TodoCreator @create-todo="createTodo" />
+    <div class="todoslist">
+        <ul>
+            <li v-for="todo in todoList" :key="todo.id">
+              {{ todo.todo }}
+            </li>
+        </ul>
+    </div>
   </main>
 </template>
 

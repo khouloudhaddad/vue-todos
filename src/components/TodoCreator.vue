@@ -14,7 +14,6 @@
         <input type="text" v-model="todo" />
         <button @click="createTodo()">Create</button>
     </div>
-    <p>{{ todo }}</p>
 </template>
 
 <style lang="scss" scoped>
