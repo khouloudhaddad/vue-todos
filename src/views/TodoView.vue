@@ -6,8 +6,9 @@
   import {
     uid
   } from 'uid';
+  import TodoItem from "../components/TodoItem.vue";
   const todoList = ref([]);
-const createTodo = (todo) => {
+  const createTodo = (todo) => {
     console.log(todo)
     todoList.value.push({
       id: uid(),
@@ -23,11 +24,9 @@ const createTodo = (todo) => {
     <h1 class="font-bold text-2xl mb-16 text-gray-700">Create Todo</h1>
     <TodoCreator @create-todo="createTodo" />
     <div class="todoslist">
-        <ul>
-            <li v-for="todo in todoList" :key="todo.id">
-              {{ todo.todo }}
-            </li>
-        </ul>
+      <ul class="list-none">
+        <TodoItem v-for="todo in todoList" :key="todo.id" :todo="todo" />
+      </ul>
     </div>
   </main>
 </template>
