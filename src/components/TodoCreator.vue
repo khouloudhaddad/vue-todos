@@ -11,14 +11,14 @@
     });
     const emit = defineEmits(['create-todo']);
     const createTodo = () => {
-        todo.invalid = false;
-        if (todo.todo !== "") {
-            emit("create-todo", todo.todo);
+        todoState.invalid = false;
+        if (todoState.todo !== "") {
+            emit("create-todo", todoState.todo);
             todo.todo = "";
             return;
         }
-        todo.invalid = true;
-        todo.errMsg = "Todo value cannot be empty!";
+        todoState.invalid = true;
+        todoState.errMsg = "Todo value cannot be empty!";
     };
 </script>
 
