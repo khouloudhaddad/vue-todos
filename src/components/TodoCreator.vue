@@ -11,15 +11,15 @@
     });
     const emit = defineEmits(['create-todo']);
     const createTodo = () => {
-        if (todoState.todo !== "") {
-            todoState.invalid = false;
-            emit("create-todo", todoState.todo);
-            todoState.todo = "";
+        todo.invalid = false;
+        if (todo.todo !== "") {
+            emit("create-todo", todo.todo);
+            todo.todo = "";
             return;
         }
-        todoState.invalid = true;
-        todoState.errMsg = "Todo Value can't be empty";
-    }
+        todo.invalid = true;
+        todo.errMsg = "Todo value cannot be empty!";
+    };
 </script>
 
 <template>
@@ -27,7 +27,7 @@
         <div class="flex items-center border-b border-teal-500 py-2">
             <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Todo Title" aria-label="Todo Title" v-model="todoState.todo" :class="{}" />
             <TodoButton @click="createTodo()">
-                Create
+                <slot name="button-content"> Create </slot>
             </TodoButton>
         </div>
     </form>
