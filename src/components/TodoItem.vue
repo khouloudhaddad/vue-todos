@@ -24,7 +24,7 @@
         <input type="checkbox" :checked="todo.isCompleted" />
         <div class="todo">
             <input v-if="todo.isEditing" type="text" :value="todo.todo" />
-            <span v-else></span>{{ todo.todo }}</span>
+            <span v-else>{{ todo.todo }}</span>
         </div>
         <div class="todo-actions">
             <Icon v-if="todo.isEditing" icon="ph:check-circle" class="icon check-icon" color="41b080" width="22" @click="$emit('edit-todo', index)" />
