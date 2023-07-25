@@ -37,3 +37,7 @@ npm init vue@latest
 ```sh
 npm i --save-dev uid sass @iconify/vue
 ```
+
+### Icons
+
+Find here list of icons [Iconify](https://icon-sets.iconify.design/)
