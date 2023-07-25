@@ -14,7 +14,7 @@
         todoState.invalid = false;
         if (todoState.todo !== "") {
             emit("create-todo", todoState.todo);
-            todo.todo = "";
+            todoState.todo = "";
             return;
         }
         todoState.invalid = true;

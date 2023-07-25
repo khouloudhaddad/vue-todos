@@ -1,6 +1,10 @@
 <script setup>
   import {
-    ref
+    Icon
+  } from "@iconify/vue";
+  import {
+    ref,
+    computed
   } from "vue";
   import TodoCreator from "../components/TodoCreator.vue";
   import {
@@ -17,10 +21,12 @@
       todoList.value = savedTodoList;
     }
   };
+  const setTodoListLocalStorage = () => {
+    localStorage.setItem("todoList", JSON.stringify(todoList.value));
+  };
   // Fetch Todo's on page load
   fetchTodoList();
   const createTodo = (todo) => {
-    console.log(todo)
     todoList.value.push({
       id: uid(),
       todo,
@@ -76,7 +82,22 @@
     margin: 0 auto;
     padding: 40px 16px;
     h1 {
+      margin-bottom: 16px;
       text-align: center;
+    }
+    .todo-list {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      margin-top: 24px;
+      gap: 20px;
+    }
+    .todos-msg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
     }
   }
 </style>
