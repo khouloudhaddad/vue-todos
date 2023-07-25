@@ -27,7 +27,7 @@
         <div class="flex items-center border-b border-teal-500 py-2">
             <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Todo Title" aria-label="Todo Title" v-model="todoState.todo" :class="{}" />
             <TodoButton @click="createTodo()">
-                <slot name="button-content"> Create </slot>
+                <template #button-content> Create </template>
             </TodoButton>
         </div>
     </form>
